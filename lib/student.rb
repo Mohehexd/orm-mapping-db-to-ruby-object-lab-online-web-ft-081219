@@ -55,6 +55,7 @@ end
 
   def self.drop_table
     sql = "DROP TABLE IF EXISTS students"
+    
     DB[:conn].execute(sql)
   end
   
@@ -77,6 +78,7 @@ end
       WHERE students.grade = 10
       LIMIT 1
     SQL
+    
     DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
     end.first
@@ -88,20 +90,25 @@ end
     FROM students 
     WHERE grade = 10 LIMIT ?
     SQL
+    
     DB[:conn].execute(sql, x).collect do |row|
       self.new_from_db(row)
     end
   end 
   
   def self.students_below_12th_grade
-    
     sql = <<-SQL
       SELECT *
       FROM students 
       WHERE grade < 12
     SQL
+    
     DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
     end 
+  end 
+  
+  def 
+    
   end 
 end
