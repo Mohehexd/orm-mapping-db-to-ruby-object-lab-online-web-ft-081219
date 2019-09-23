@@ -9,10 +9,10 @@ class Student
     new_student
   end
 
-def self.all
- sql = <<-SQL
-    SELECT * 
-    FROM students 
+  def self.all
+    sql = <<-SQL
+      SELECT * 
+      FROM students 
     SQL
     DB[:conn].execute(sql).collect do |row|
       self.new_from_db(row)
