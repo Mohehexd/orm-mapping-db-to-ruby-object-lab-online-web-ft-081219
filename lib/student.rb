@@ -81,8 +81,5 @@ end
       self.new_from_db(row)
     end.first
   end 
-  
-  def 
-  end 
 
 end
