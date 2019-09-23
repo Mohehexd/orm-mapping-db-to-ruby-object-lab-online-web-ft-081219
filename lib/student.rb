@@ -87,10 +87,7 @@ end
     SELECT * 
     FROM students 
     WHERE grade = 10 LIMIT ?"
-    DB[:conn].execute(sql, x)
     SQL
-    
-  
-  
+    DB[:conn].execute(sql, x)
   end
 end
