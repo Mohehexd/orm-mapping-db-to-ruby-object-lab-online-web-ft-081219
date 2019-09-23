@@ -90,5 +90,6 @@ end
     SQL
     DB[:conn].execute(sql, x).collect do |row|
       self.new_from_db(row)
-  end
+    end
+  end 
 end
