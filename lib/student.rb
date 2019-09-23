@@ -86,7 +86,7 @@ end
     sql = <<-SQL
       SELECT * 
       FROM students
-      WHERE students.grade = 10
+      WHERE students.grade  10
       LIMIT X
     SQL
     
