@@ -43,11 +43,11 @@ end
   
   def self.create_table
     sql = <<-SQL
-    CREATE TABLE IF NOT EXISTS students (
-      id INTEGER PRIMARY KEY,
-      name TEXT,
-      grade TEXT
-    )
+      CREATE TABLE IF NOT EXISTS students (
+        id INTEGER PRIMARY KEY,
+        name TEXT,
+        grade TEXT
+      )
     SQL
 
     DB[:conn].execute(sql)
@@ -59,20 +59,20 @@ end
   end
   
   def self.all_students_in_grade_9
-  sql = <<-SQL
-    SELECT *
-    FROM students
-    WHERE students.grade = 9
-  SQL
+    sql = <<-SQL
+      SELECT *
+      FROM students
+      WHERE students.grade = 9
+    SQL
   
   DB[:conn].execute(sql).collect do |row|
     self.new_from_db(row)
     end 
   end 
   
-  def 
-    
-    
+  def .first_X_students_in_grade_10
+    sql = <<-SQL
+      SELECT 
     
   end 
 
