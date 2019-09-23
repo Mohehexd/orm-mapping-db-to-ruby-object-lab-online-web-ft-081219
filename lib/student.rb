@@ -11,7 +11,10 @@ class Student
 
   def self.all
     
-    
+    sql = <<-SQL
+      SELECT *
+      FROM songs
+    SQL
     
   end
 
